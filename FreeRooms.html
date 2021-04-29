@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        @media only screen and (max-width:600px) {
+            h1 {
+                background: purple
+            }
+        }
+
+        @media only screen and (min-width:600px) {
+            h1 {
+                background: green;
+            }
+        }
+    </style>
+    <script>
+        var today = new Date();
+        var hour = today.getHours();
+        var minute = parseInt(today.getMinutes());
+        if (minute < 10) {
+            minute = "0" + minute
+        }
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var day = days[today.getDay()]
+
+        //Monday
+        if (hour == "9" && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period One"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 203B, 208, 301, GYM, GUI, ADM, PRI, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 203B, 301, 303, LIB, ADM, PRI, and 202"
+        }
+        if (hour == "10" && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Two"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 203B, 301, 303, LIB, ADM, PRI, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 203B, 208, 301, 303, GUI, ADM, PRI, and 202"
+        }
+        if (hour == "11" && day == "Monday" && minute < 30) {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 203B, 208, 301, 303, GUI, ADM, PRI, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 203B, 208, 301, 303, GUI, ADM, PRI, 202, and 203A"
+        }
+
+        if (hour == "11" && day == "Monday" && minute > 29) {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 203B, 208, 301, 303, GUI, ADM, PRI, 202, and 203A"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 203B, 208, GYM, GUI, ADM, PRI, 202, and 301 (no eating)"
+        }
+
+        if (hour == "12" && minute < 45 && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Lunch"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 203B, 208, GYM, GUI, ADM, PRI, 202, and 301 (no eating)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 301, LIB, ADM, PRI, and 202"
+        }
+        if (hour == "12" && minute > 45 && day == "Monday" || hour == "13" && minute < 45 && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Four"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 301, LIB, ADM, PRI, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 204, 301, 307, LIB, GYM, ADM, PRI, and 202"
+        }
+        if (hour == "13" && minute > 45 && day == "Monday" || hour == "14" && minute < 45 && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Five"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 204, 301, 307, LIB, GYM, ADM, PRI, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 201, 203B, 301, LIB, ADM, PRI, and 202"
+        }
+        if (hour == "14" && minute > 45 && day == "Monday" || hour == "15" && day == "Monday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Six"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 201, 203B, 301, LIB, ADM, PRI, and 202"
+        }
+
+
+        //Tuesday
+
+        if (hour == "9" && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period One"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 203B, 204, LIB, 202, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 201, 203B, 204, 306, 202, and ADM"
+        }
+        if (hour == "10" && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Two"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 201, 203B, 204, 306, 202, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 203B, 306, GUI, and ADM"
+        }
+        if (hour == "11" && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 203B, 306, GUI, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 208, 202, and 301 (no eating)"
+        }
+        if (hour == "12" && minute < 45 && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Lunch"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 208, 202, and 301 (no eating)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 301, LIB, and ADM"
+        }
+        if (hour == "12" && minute > 45 && day == "Tuesday" || hour == "13" && minute < 45 && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Four"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 301, LIB, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 302, 307, LIB, and ADM"
+        }
+        if (hour == "13" && minute > 45 && day == "Tuesday" || hour == "14" && minute < 45 && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Five"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 302, 307, LIB, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 203B, 307, LIB, GYM, 202, and ADM"
+        }
+        if (hour == "14" && minute > 45 && day == "Tuesday" || hour == "15" && day == "Tuesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Six"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 203B, 307, LIB, GYM, 202, and ADM"
+        }
+
+        //Wednesday
+        if (hour == "9" && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period One"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 208, 303, LIB, PRI, GUI, ADM, 202, and 301 (if Grade 11s are at home)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 301, 304, 307 (if grade 11s are at home), ADM, PRI, and 208 (if grade 11s are in person)"
+        }
+        if (hour == "10" && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Two"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 301, 304, 307 (if grade 11s are at home), ADM, PRI, and 208 (if grade 11s are in person)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 208, 304, 302 (if grade 11s are at home), LIB (if grade 11s are in person), GUI, ADM, PRI, 202, 301 (if grade 11s are in person), and 101 (if grade 11s are in person)"
+        }
+        if (hour == "11" && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 208, 304, 302 (if grade 11s are at home), LIB (if grade 11s are in person), GUI, ADM, PRI, 202, 301 (if grade 11s are in person), and 101 (if grade 11s are in person)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201 (if grade 11s are at home), 208, LIB (if grade 11s are at home), GUI, ADM, PRI, 202, and 301 (no eating)"
+        }
+        if (hour == "12" && minute < 45 && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Lunch"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201 (if grade 11s are at home), 208, LIB (if grade 11s are at home), GUI, ADM, PRI, 202, and 301 (no eating)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101 (if grade 11s are at home), 203A (if grade 11s are in person), 203B, 301, 303 (if grade 11s are at home), 306, LIB (if grade 11s are at home), ADM, PRI, and 202 (if grade 11s are in person)"
+        }
+        if (hour == "12" && minute > 45 && day == "Wednesday" || hour == "13" && minute < 45 && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Four"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101 (if grade 11s are at home), 203A (if grade 11s are in person), 203B, 301, 303 (if grade 11s are at home), 306, LIB (if grade 11s are at home), ADM, PRI, and 202 (if grade 11s are in person)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 203A (if grade 11s are in person) 203B, 301 (if grade 11s are in person), 306, 303 (if grade 11s are at home), ADM, 208 (if grade 11s are in person), and PRI"
+        }
+        if (hour == "13" && minute > 45 && day == "Wednesday" || hour == "14" && minute < 45 && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Five"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 203A (if grade 11s are in person) 203B, 301 (if grade 11s are in person), 306, 303 (if grade 11s are at home), ADM, 208 (if grade 11s are in person), and PRI"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 201, 303 (if grade 11s are at home), 306, LIB, 208, ADM, PRI, and 202"
+        }
+        if (hour == "14" && minute > 45 && day == "Wednesday" || hour == "15" && day == "Wednesday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Six"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 201, 303 (if grade 11s are at home), 306, LIB, 208, ADM, PRI, and 202"
+        }
+
+        //Thursday
+        if (hour == "9" && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period One"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 203B, 204, 208, LIB, GUI, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 201, 203B, 208, LIB, and ADM"
+        }
+        if (hour == "10" && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Two"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 201, 203B, 208, LIB, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 203B, 208, 307, LIB, GUI, ADM, and 202"
+        }
+        if (hour == "11" && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 203B, 208, 307, LIB, GUI, ADM, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 208, GUI, ADM, PRI, 202, and 301 (no eating)"
+        }
+        if (hour == "12" && minute < 45 && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Lunch"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 208, GUI, ADM, PRI, 202, and 301 (no eating)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, LIB, ADM, GYM, and 202"
+        }
+        if (hour == "12" && minute > 45 && day == "Thursday" || hour == "13" && minute < 45 && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Four"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, LIB, ADM, GYM, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 203B, 204, 208, 303, LIB, GYM, and ADM"
+        }
+        if (hour == "13" && minute > 45 && day == "Thursday" || hour == "14" && minute < 45 && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Five"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 203B, 204, 208, 303, LIB, GYM, and ADM"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, GYM, 208, ADM, and 202"
+        }
+        if (hour == "14" && minute > 45 && day == "Thursday" || hour == "15" && day == "Thursday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Six"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, GYM, 208, ADM, and 202"
+        }
+
+        //Friday
+        if (hour == "9" && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period One"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 204, 306, 307, LIB, GUI, ADM, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 204, 303, 306, ADM, and 202"
+        }
+        if (hour == "10" && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Two"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 204, 303, 306, ADM, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 204, 306, LIB, GUI, ADM and 202"
+        }
+        if (hour == "11" && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Three"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 204, 306, LIB, GUI, ADM and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 201, 208, 306, 307, GUI, ADM, PRI, 202, and 301 (no eating)"
+        }
+        if (hour == "12" && minute < 45 && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Lunch"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 201, 208, 306, 307, GUI, ADM, PRI, 202, and 301 (no eating)"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: Ceres inner, Ceres outer, 101, 203B, 301, 306, 307, LIB, ADM, 208, and 202"
+        }
+        if (hour == "12" && minute > 45 && day == "Friday" || hour == "13" && minute < 45 && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Four"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: Ceres inner, Ceres outer, 101, 203B, 301, 306, 307, LIB, ADM, 208, and 202"
+            var para2 = document.createElement("p")
+            document.body.appendChild(para2)
+            para2.innerHTML = "The free rooms next period are: 101, 201, 203B, 204, 301, 302, 306, 307, and ADM"
+        }
+        if (hour == "13" && minute > 45 && day == "Friday" || hour == "14" && minute < 45 && day == "Friday") {
+            var header = document.createElement("h1")
+            document.body.appendChild(header)
+            header.innerHTML = hour + ":" + minute + " on " + day
+            var header2 = document.createElement("h2")
+            document.body.appendChild(header2)
+            header2.innerHTML = "Period Five"
+            var para = document.createElement("p")
+            document.body.appendChild(para)
+            para.innerHTML = "The free rooms are: 101, 201, 203B, 204, 301, 302, 306, 307, and ADM"
+        }
+
+    </script>
+    <a href="./Available RoomsVirtual Teaching (1).pdf" download> Download pdf </a>
+</body>
+
+</html>
